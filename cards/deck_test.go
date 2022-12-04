@@ -47,3 +47,12 @@ func TestDeal(t *testing.T) {
 		t.Errorf("Expected remaining cards size of 47, but got %v", len(remainingCards))
 	}
 }
+
+func TestToString(t *testing.T) {
+	d := newDeck()
+	s := d.toString()
+
+	if s == "" {
+		t.Errorf("Expected string not to be empty")
+	}
+}
